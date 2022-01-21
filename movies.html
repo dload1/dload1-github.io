@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous" />
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
+  </script>
+  <link href="styles.css" rel="stylesheet" />
+
+  <title>Movies</title>
+
+  <script>
+    // put all the background image locations of the website in an array
+      bg_images = [
+        "images2/imdb.jpg",
+        "images2/rt.jpg",
+        "images2/google.jpg",
+        "images2/yt.jpg",
+      ];
+
+      // this program changes the background image as any search engine like imdb, youtube etc is selected
+      document.addEventListener("DOMContentLoaded", function () {
+        // add event listener to the "select" element which triggers when it is changed i.e. any option is selected
+        // default option "--Please select an option--" to be selected initially and disabled s.t. it can't be selected again. Refer the select tag below
+        document
+          .querySelector("select")
+          .addEventListener("change", function () {
+            let x = document.querySelector("#search-area");
+            let dbs = document.querySelectorAll(".dbase");
+            for (let i = 0; i < dbs.length; i++) {
+              if (dbs[i].selected == true) {
+                // when an option is selected change the form action to the web address stored in that option's 'value'
+                x.action = dbs[i].value;
+
+                // get the image element that shows the background and change its source to the corresponding option
+                bg = document.getElementById("bgimage");
+                bg.style.backgroundImage = "url(" + bg_images[i] + ")";
+
+                // bg = document.getElementById("bgimage");
+                // bg.style.backgroundImage = "url(" + bg_images[i] + ")";
+                break;
+              }
+            }
+          });
+      });
+  </script>
+</head>
+
+<body>
+  <!-- Bootstrap Navbar header -->
+  <header
+    class="navbar navbar-expand navbar-dark flex-column flex-sm-row bd-navbar sticky-top justify-content-sm-around"
+    id="movies-navbar">
+    <!--This id is used for the navbar background color of this page only -->
+
+    <a class="navbar-brand mx-0 mx-md-5" href="https://cs50.harvard.edu/x/2022/" aria-label="Bootstrap"><img
+        src="images2/cs50.jpg" width="150" height="50" alt="CS50" focusable="false" />
+    </a>
+
+    <div class="navbar-nav">
+      <ul class="navbar-nav bd-navbar-nav flex-row">
+        <li class="nav-item px-sm-4">
+          <a class="nav-link" href="index.html">
+            <h4>Home</h4>
+          </a>
+        </li>
+        <li class="nav-item px-sm-4">
+          <a class="nav-link active" href="#">
+            <h4>Movies & Stars</h4>
+          </a>
+        </li>
+        <li class="nav-item px-sm-4">
+          <a class="nav-link" href="cats.html">
+            <h4>Big Cats</h4>
+          </a>
+        </li>
+        <li class="nav-item px-sm-4">
+          <a class="nav-link" href="thanks.html">
+            <h4>Final Page</h4>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- This div element holds the background image. Properties are in the CSS sheet. -->
+  <div id="bgimage"></div>
+
+  <div class="d-flex justify-content-start">
+    <div class="container-fluid px-sm-5 mt-4 movies-content">
+      <h1 class="display-3 pb-2" style="text-decoration: underline dashed;"><b><i>Movie/Star Info</i></b></h1>
+      <p class="movies-text">
+        You can see the ratings and other trivia for your favourite movie
+        below.
+        <br />Select any search engine and enter the movie name. Or you may
+        watch its trailer on youtube.
+        <br /> You may get information regarding your favorite stars too.
+        <br /> Make choices below.<br /><br />
+      </p>
+
+      <form name="movie_name" class="d-flex row flex-column flex-sm-row justify-content-center flex-fill"
+        id="search-area">
+        <div class="p-2 flex-grow-1">
+          <input type="search" class="form-control form-control-lg" id="autoSizingInput"
+            placeholder="Enter movie or star name" name="q" />
+        </div>
+
+        <div class="p-2">
+          <h4 class="display-6">
+            <label class="visually-hidden" for="autoSizingSelect">Database:</label>
+            <select name="database" class="form-select mt-1" id="autoSizingSelect">
+              <option value="" selected disabled>
+                --Please select an option--
+              </option>
+              <option value="https://www.imdb.com/find" class="dbase">
+                iMDb
+              </option>
+              <option value="https://www.rottentomatoes.com/search" class="dbase">
+                Rotten Tomatoes
+              </option>
+              <option value="https://www.google.com/search" class="dbase">
+                Google
+              </option>
+              <option value="https://www.youtube.com/results" class="dbase">
+                YouTube
+              </option>
+            </select>
+          </h4>
+        </div>
+
+        <div class="p-2">
+          <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+        </div>
+      </form>
+
+      <div>
+        <h4 class="display-3 mt-5" style="text-decoration: underline dotted;"><b><i>Top Movies</i></b></h4>
+        <p class="movies-text pt-4">
+          Wanna see the list of top movies? Click below:
+        </p>
+
+        <!-- form tag is necessary for website loading buttons, without it the site won't load-->
+        <form name="Top Movies" id="top_movie" target="_blank" class="d-flex m-2 flex-column flex-sm-row mb-5">
+          <button type="submit" formaction="https://www.imdb.com/chart/top/?ref_=nv_mv_250"
+            class="btn btn-warning btn-lg col px-2 mx-2 mb-2">
+            iMDb top movies
+          </button>
+          <button type="submit" formaction="https://www.rottentomatoes.com/top/bestofrt/"
+            class="btn btn-danger btn-lg col p-2 mx-2 mb-2">
+            Rotten Tomatoes top movies
+          </button>
+          <button type="submit"
+            formaction="https://www.metacritic.com/browse/movies/score/metascore/all/filtered?sort=desc"
+            class="btn btn-info btn-lg col p-2 mx-2 mb-2">
+            Metacritic top movies
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
