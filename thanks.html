@@ -1,75 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+      crossorigin="anonymous"
+    ></script>
+    <link href="styles.css" rel="stylesheet" />
+    <title>Thanks</title>
+    <!-- style only for this page -->
+    <style>
+      body {
+        background-color: black;
+      }
+    </style>
+  </head>
 
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
-    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous" />
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
-    </script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
-    </script>
-  <link href="styles.css" rel="stylesheet" />
-  <title>Thanks</title>
-  <style>
-    body {
-      background-color: black;
-    }
-  </style>
-</head>
+  <body>
+    <!-- Bootstrap Navbar header -->
+    <header
+      class="navbar navbar-expand navbar-light bg-light flex-column flex-sm-row bd-navbar sticky-top justify-content-sm-around my-0 py-0 my-lg-auto py-lg-auto"
+    >
+      <a
+        class="navbar-brand mx-0 mx-md-5"
+        href="https://cs50.harvard.edu/x/2022/"
+        aria-label="Bootstrap"
+        ><img
+          src="images2/cs50.jpg"
+          width="120"
+          height="40"
+          alt="CS50"
+          focusable="false"
+        />
+      </a>
 
-<body>
-  <!-- Bootstrap Navbar header -->
-  <header
-    class="navbar navbar-expand navbar-light bg-light flex-column flex-md-row bd-navbar sticky-top justify-content-sm-around">
-    <a class="navbar-brand mx-0 mx-md-5" href="https://cs50.harvard.edu/x/2022/" aria-label="Bootstrap"><img
-        src="images2/cs50.jpg" width="150" height="50" alt="CS50" focusable="false" />
-    </a>
+      <div class="navbar-nav">
+        <ul class="navbar-nav bd-navbar-nav flex-row">
+          <li class="nav-item px-sm-4">
+            <a class="nav-link" href="index.html">
+              <b>Home</b>
+            </a>
+          </li>
+          <li class="nav-item px-sm-4">
+            <a class="nav-link" href="movies.html">
+              <b>Movies & Stars</b>
+            </a>
+          </li>
+          <li class="nav-item px-sm-4">
+            <a class="nav-link" href="cats.html">
+              <b>Big Cats</b>
+            </a>
+          </li>
+          <li class="nav-item px-sm-4">
+            <a class="nav-link active" href="#">
+              <b>Final Page</b>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </header>
 
-    <div class="navbar-nav">
-      <ul class="navbar-nav bd-navbar-nav flex-row">
-        <li class="nav-item px-sm-4">
-          <a class="nav-link" href="index.html">
-            <h4>Home</h4>
-          </a>
-        </li>
-        <li class="nav-item px-sm-4">
-          <a class="nav-link" href="movies.html">
-            <h4>Movies & Stars</h4>
-          </a>
-        </li>
-        <li class="nav-item px-sm-4">
-          <a class="nav-link" href="cats.html">
-            <h4>Big Cats</h4>
-          </a>
-        </li>
-        <li class="nav-item px-sm-4">
-          <a class="nav-link active" href="#">
-            <h4>Final Page</h4>
-          </a>
-        </li>
-      </ul>
-    </div>
-  </header>
-
-  <!-- Describe the Thanks text to be displayed.
+    <!-- Describe the Thanks text to be displayed.
     Taken from Bootstrap, the vstack class places the text in a stacked format.
     Somehow I found this to be better suited than the flex. -->
-  <main>
-    <div class="vstack mt-5">
-      <div class="pt-3">
-        <h1 class="glow">THANKS</h1>
+    <main>
+      <div class="vstack mt-5">
+        <div class="pt-3">
+          <h1 class="glow">THANKS</h1>
+        </div>
+        <div class="pt-3">
+          <h1 class="glow">FOR</h1>
+        </div>
+        <div class="pt-3">
+          <h1 class="glow">VISITING</h1>
+        </div>
       </div>
-      <div class="pt-3">
-        <h1 class="glow">FOR</h1>
-      </div>
-      <div class="pt-3">
-        <h1 class="glow">VISITING</h1>
-      </div>
-    </div>
-  </main>
-</body>
-
+    </main>
+  </body>
 </html>

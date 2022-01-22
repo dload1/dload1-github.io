@@ -1,0 +1,179 @@
+/* this is required for proper styling */
+body,
+html {
+  height: 100%;
+}
+/* ------*************************---------
+------*************************---------
+------*************************---------
+------*************************--------- */
+
+/*CSS for index page*/
+
+/*style for image carousel caption text*/
+.carousel-caption {
+  /* for transparency of caption text to make it visible on all background images */
+  background: rgba(0, 0, 0, 0.7);
+
+  margin-bottom: 10px;
+  text-align: left;
+  padding-bottom: 0;
+  padding-left: 1%;
+  left: 10%;
+  right: 10%;
+  font-size: 1.25em;
+}
+.navbar-nav {
+  font-size: 1em;
+}
+
+/* for small screens like mobile phones in portrait mode the above sizes are sufficient */
+/* but for larger displays the following ones are better. Result of pure hit-and-trial on various screen sizes */
+@media screen and (min-width: 768px) and (min-height: 576px) {
+  .carousel-caption {
+    font-size: 2.5rem;
+  }
+  .navbar-nav {
+    font-size: 1.5em;
+    font-weight: 500;
+  }
+}
+/* ------*************************---------
+------*************************---------
+------*************************---------
+------*************************---------
+------*************************---------
+------*************************---------
+------*************************---------
+------*************************---------
+------*************************---------
+------*************************---------
+------*************************--------- */
+
+/* CSS for Movies page */
+
+/* movies page navbar styling */
+.navbar#movies-navbar {
+  background-color: indigo;
+}
+
+/*this is used to affect the background image*/
+#bgimage {
+  position: fixed;
+  display: block;
+  background-image: url("images2/bgwhite.jpg");
+  height: 100%;
+  width: 100%;
+
+  -webkit-filter: blur(12px);
+  -moz-filter: blur(12px);
+  -o-filter: blur(12px);
+  -ms-filter: blur(12px);
+  filter: blur(12px);
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* Properties of text to appear over the image */
+.movies-content {
+  color: DarkCyan;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  position: absolute;
+}
+
+/* Properties of text description to appear over the image. */
+p.movies-text {
+  font-size: 2em;
+  font-weight: 600;
+}
+
+/* ------*************************---------
+------*************************---------
+------*************************---------
+------*************************---------
+------*************************---------
+------*************************---------
+------*************************---------
+------*************************---------
+------*************************---------
+------*************************--------- */
+
+
+/*Below is the CSS for Wild cats page*/
+
+/* Cats page navbar styling */
+.navbar#cats-navbar {
+  background-color: darkgreen;
+}
+
+/*This class specifies the properties for tooltip and its text*/
+.tiptext {
+  visibility: hidden;
+  top: 0;
+  left: 0;
+  color: white;
+  background: rgba(30, 130, 76, 0.85);
+  font-size: 1.5em;
+  padding: 10px 12px;
+  margin: 12px;
+  border-radius: 15px;
+  position: fixed;
+  z-index: 999;
+}
+
+/* Properties of the animals to be displayed */
+/* Max-height and min-height are specified to make all images look same height: purely by hit & trial check on most devices */
+img.cats {
+  width: 100%;
+  max-height: 370px;
+  min-height: 250px;
+}
+
+/* This describes the background image properties for the animals */
+.cats-bg {
+  min-height: 100%;
+  width: 100%;
+  background-image: url("images3/jungle.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+/* ------*************************---------
+------*************************---------
+------*************************---------
+------*************************---------
+------*************************---------
+------*************************---------
+------*************************---------
+------*************************---------
+------*************************---------
+------*************************--------- */
+
+/* CSS for thanks page */
+
+/* This defines the animated text properties. Borrowed from W3-schools */
+.glow {
+  margin-top: 5%;
+  font-size: 10vw;
+  font-family: "Apple Chancery", "Brush Script MT", Tahoma, Verdana, cursive;
+  color: #fff;
+  text-align: center;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+/* Describe the animation effect */
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 12px #fff, 0 0 30px #e60073,
+      0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+
+  to {
+    text-shadow: 0 0 30px #fff, 0 0 40px #ff4da6, 0 0 50px #ff4da6,
+      0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6, 0 0 90px #ff4da6;
+  }
+}
