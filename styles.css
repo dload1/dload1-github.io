@@ -159,7 +159,7 @@ img.cats {
 .glow {
   margin-top: 5%;
   font-size: 10vw;
-  font-family: "Apple Chancery", "Brush Script MT", Tahoma, Verdana, cursive;
+  font-family: cursive,"Apple Chancery", "Brush Script MT", Tahoma, Verdana;
   color: #fff;
   text-align: center;
   animation: glow 1s ease-in-out infinite alternate;
